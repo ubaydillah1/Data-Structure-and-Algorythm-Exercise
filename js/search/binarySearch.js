@@ -1,7 +1,6 @@
 function BinarySearch(arr, target) {
   if (arr.length < 1) return -1;
 
-  let condition = true;
   let leftIndex = 0;
   let rightIndex = arr.length - 1;
 
@@ -10,12 +9,12 @@ function BinarySearch(arr, target) {
 
     if (arr[middleIndex] === target) {
       return middleIndex;
+    }
+
+    if (target > middleIndex) {
+      leftIndex = middleIndex + 1;
     } else {
-      if (target > middleIndex) {
-        leftIndex = middleIndex + 1;
-      } else {
-        rightIndex = middleIndex - 1;
-      }
+      rightIndex = middleIndex - 1;
     }
   }
 
