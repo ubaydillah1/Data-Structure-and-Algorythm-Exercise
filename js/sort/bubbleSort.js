@@ -1,3 +1,5 @@
+// Big O(n^2)
+
 function bubbleSort(arr) {
   let isContinue = false;
 
